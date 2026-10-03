@@ -9,7 +9,7 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT_DIR = os.path.join(HERE, '..', 'Законопроекты')
+OUT_DIR = os.environ.get('ACT_OUT_DIR') or os.path.join(HERE, '..', 'Законопроекты')
 
 doc = Document()
 for s in doc.sections:

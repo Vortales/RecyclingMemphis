@@ -2,7 +2,7 @@
 import os
 from lawtext import article
 
-OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'Законопроекты')
+OUT_DIR = os.environ.get('ACT_OUT_DIR') or os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'Законопроекты')
 os.makedirs(OUT_DIR, exist_ok=True)
 DATE_EN = 'SEPTEMBER 28, 2026'
 
